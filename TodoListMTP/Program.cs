@@ -14,7 +14,7 @@ namespace TodoListMTP
 
             var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
             builder.Services.AddDbContext<EntityContext>(opt =>
-                opt.UseSqlServer(connectionString));
+                opt.UseNpgsql(connectionString));
 
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();

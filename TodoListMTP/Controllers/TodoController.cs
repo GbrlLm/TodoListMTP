@@ -18,8 +18,8 @@ namespace TodoListMTP.Controllers
             _todoService = todoService;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> GetTask(Guid id)
+        [HttpGet("{id:int}")]
+        public async Task<IActionResult> GetTask(int id)
         {
             var todoTask = await _todoService.GetTask(id);
             return Ok(todoTask);
@@ -47,8 +47,8 @@ namespace TodoListMTP.Controllers
             }
         }
 
-        [HttpPatch]
-        public async Task<IActionResult> UpdateDoneTask(Guid id)
+        [HttpPatch("{id:int}")]
+        public async Task<IActionResult> UpdateDoneTask(int id)
         {
             try
             {
@@ -63,8 +63,8 @@ namespace TodoListMTP.Controllers
         }
 
 
-        [HttpPut]
-        public async Task<IActionResult> PutTodoTask(Guid id, TodoTask task)
+        [HttpPut("{id:int}")]
+        public async Task<IActionResult> PutTodoTask(int id, TodoTask task)
         {
             try
             {
@@ -78,8 +78,8 @@ namespace TodoListMTP.Controllers
             }
         }
 
-        [HttpDelete]
-        public IActionResult DeleteTodoTask(Guid id)
+        [HttpDelete("{id:int}")]
+        public IActionResult DeleteTodoTask(int id)
         {
             try
             {

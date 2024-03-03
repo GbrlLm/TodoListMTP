@@ -4,12 +4,12 @@ namespace TodoListMTP.Services.Interfaces
 {
     public interface ITodoService
     {
-        Task<TodoTask> GetTask(Guid id);
+        Task<TodoTask> GetTask(int id);
         Task<IEnumerable<TodoTask>> GetListTask();
         Task<TodoTask> PostTask(TodoTask task);
-        Task<TodoTask> UpdateDoneTask(Guid id);
-        Task<TodoTask> PutTask(Guid id, TodoTask task);
-        void DeleteTask(Guid id);
+        Task<TodoTask> UpdateDoneTask(int id);
+        Task<TodoTask> PutTask(int id, TodoTask task);
+        void DeleteTask(int id);
 
     }
 }

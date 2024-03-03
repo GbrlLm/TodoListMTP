@@ -10,13 +10,5 @@ namespace TodoListMTP.Configuration.Context
         }
 
         public DbSet<TodoTask> Todo { get; set; }
-
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
-
-            modelBuilder.Entity<TodoTask>(entity => entity.HasKey("id"));
-        }
     }
 }

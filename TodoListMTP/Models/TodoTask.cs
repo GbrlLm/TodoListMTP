@@ -1,11 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace TodoListMTP.Models
+﻿namespace TodoListMTP.Models
 {
     public class TodoTask
     {
-        [Required]
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
         public bool Done { get; set; } = false;

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TodoListMTP")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0f3be60d0af9b3ae9200757f44a9a98ad189a119")]
 [assembly: System.Reflection.AssemblyProductAttribute("TodoListMTP")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TodoListMTP")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

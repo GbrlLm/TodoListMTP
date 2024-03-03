@@ -13,7 +13,7 @@ namespace TodoListMTP.Services
             _todoRepository = todoRepository;   
         }
 
-        public async Task<TodoTask> GetTask(Guid id)
+        public async Task<TodoTask> GetTask(int id)
         {
             return await _todoRepository.GetTask(id);
         }
@@ -36,7 +36,7 @@ namespace TodoListMTP.Services
             
         }
 
-        public async Task<TodoTask> UpdateDoneTask(Guid id)
+        public async Task<TodoTask> UpdateDoneTask(int id)
         {
             try
             {
@@ -49,7 +49,7 @@ namespace TodoListMTP.Services
 
         }
 
-        public async Task<TodoTask> PutTask(Guid id, TodoTask task) 
+        public async Task<TodoTask> PutTask(int id, TodoTask task) 
         {
             try
             {
@@ -61,7 +61,7 @@ namespace TodoListMTP.Services
             }
         }  
 
-        public async void DeleteTask(Guid id)
+        public async void DeleteTask(int id)
         {
             try
             {

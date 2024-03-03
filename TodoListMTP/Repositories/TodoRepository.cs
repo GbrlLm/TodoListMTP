@@ -16,7 +16,7 @@ namespace TodoListMTP.Repositories
             _entityContext = entityContext;
         }
 
-        public async Task<TodoTask> GetTask(Guid id)
+        public async Task<TodoTask> GetTask(int id)
         {
             var todoTask = _entityContext.Todo.FindAsync(id).Result;
             return todoTask;
@@ -44,7 +44,7 @@ namespace TodoListMTP.Repositories
             
         }
 
-        public async Task<TodoTask> PutTask(Guid id, TodoTask task)
+        public async Task<TodoTask> PutTask(int id, TodoTask task)
         {
             if (id != task.Id)
             {
@@ -70,7 +70,7 @@ namespace TodoListMTP.Repositories
             }
         }
 
-        public async Task<TodoTask> UpdateDoneTask(Guid id)
+        public async Task<TodoTask> UpdateDoneTask(int id)
         {
             var todoDoneTask = await _entityContext.Todo.FindAsync(id);
             if (todoDoneTask == null)
@@ -92,7 +92,7 @@ namespace TodoListMTP.Repositories
             }
         }
 
-        public async void DeleteTask(Guid id)
+        public async void DeleteTask(int id)
         {
             var data = await _entityContext.Todo.FindAsync(id);
             if (data != null)

@@ -4,11 +4,11 @@ namespace TodoListMTP.Repositories.Interfaces
 {
     public interface ITodoRepository
     {
-        Task<TodoTask> GetTask(Guid id);
+        Task<TodoTask> GetTask(int id);
         Task<IEnumerable<TodoTask>> GetListTask();
         Task<TodoTask> PostTask(TodoTask task);
-        Task<TodoTask> PutTask(Guid id, TodoTask task);
-        Task<TodoTask> UpdateDoneTask(Guid id);
-        void DeleteTask(Guid id);
+        Task<TodoTask> PutTask(int id, TodoTask task);
+        Task<TodoTask> UpdateDoneTask(int id);
+        void DeleteTask(int id);
     }
 }
