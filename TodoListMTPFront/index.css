@@ -1,0 +1,25 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+form input, form button {
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.todoTask-done {
+  text-decoration: line-through;
+}
