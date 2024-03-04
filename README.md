@@ -12,3 +12,6 @@ Caso não tenha instalado o Entity Framework em sua máquina, é necessário exe
 ```console
 dotnet tool install --global dotnet-ef
 ```
+
+IMPORTANTE
+Ao executar o back-end verificar a porta em que será sistema será executado e fazer a alteração, caso necessário, no arquivo index.js que está localizado na pasta TodoListMTPFront
