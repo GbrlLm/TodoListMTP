@@ -61,11 +61,11 @@ namespace TodoListMTP.Services
             }
         }  
 
-        public async void DeleteTask(int id)
+        public async Task<int> DeleteTask(int id)
         {
             try
             {
-                _todoRepository.DeleteTask(id);
+                return await _todoRepository.DeleteTask(id);
             }
             catch (Exception ex)
             {

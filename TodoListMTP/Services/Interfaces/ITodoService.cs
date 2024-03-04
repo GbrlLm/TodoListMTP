@@ -9,7 +9,7 @@ namespace TodoListMTP.Services.Interfaces
         Task<TodoTask> PostTask(TodoTask task);
         Task<TodoTask> UpdateDoneTask(int id);
         Task<TodoTask> PutTask(int id, TodoTask task);
-        void DeleteTask(int id);
+        Task<int> DeleteTask(int id);
 
     }
 }

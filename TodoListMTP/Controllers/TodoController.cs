@@ -79,12 +79,11 @@ namespace TodoListMTP.Controllers
         }
 
         [HttpDelete("{id:int}")]
-        public IActionResult DeleteTodoTask(int id)
+        public async Task<IActionResult> DeleteTodoTask(int id)
         {
             try
             {
-                _todoService.DeleteTask(id);
-                return Ok();
+                return Ok(await _todoService.DeleteTask(id));
             }
             catch (Exception ex)
             {

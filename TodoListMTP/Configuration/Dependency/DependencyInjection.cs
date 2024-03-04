@@ -17,7 +17,7 @@ namespace TodoListMTP.Configuration.Dependency
         public static void RegisterRepositories(IServiceCollection services)
         {
             services.AddScoped<EntityContext>();
-            services.AddTransient<ITodoRepository, TodoRepository>();
+            services.AddScoped<ITodoRepository, TodoRepository>();
         }
 
         public static void RegisterServices(IServiceCollection services)

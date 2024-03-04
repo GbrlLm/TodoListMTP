@@ -9,6 +9,6 @@ namespace TodoListMTP.Repositories.Interfaces
         Task<TodoTask> PostTask(TodoTask task);
         Task<TodoTask> PutTask(int id, TodoTask task);
         Task<TodoTask> UpdateDoneTask(int id);
-        void DeleteTask(int id);
+        Task<int> DeleteTask(int id);
     }
 }

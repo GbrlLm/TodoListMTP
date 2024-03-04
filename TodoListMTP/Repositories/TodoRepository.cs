@@ -46,21 +46,16 @@ namespace TodoListMTP.Repositories
 
         public async Task<TodoTask> PutTask(int id, TodoTask task)
         {
-            if (id != task.Id)
-            {
-                return null;
-            }
-
             var todoTask = await _entityContext.Todo.FindAsync(id);
             if (todoTask == null)
             {
                 return null;
             }
 
-            _entityContext.Todo.Entry(todoTask).CurrentValues.SetValues(task);
-
             try
             {
+                task.Id = id;
+                _entityContext.Todo.Entry(todoTask).CurrentValues.SetValues(task);
                 await _entityContext.SaveChangesAsync();
                 return task;
             }
@@ -92,20 +87,23 @@ namespace TodoListMTP.Repositories
             }
         }
 
-        public async void DeleteTask(int id)
+        public async Task<int> DeleteTask(int id)
         {
             var data = await _entityContext.Todo.FindAsync(id);
             if (data != null)
             {
                 try
                 {
-                    _entityContext.Remove(id);
+                    _entityContext.Todo.Remove(data);
+                    return await _entityContext.SaveChangesAsync();
                 }
                 catch (Exception ex)
                 {
                     throw new Exception(ex.Message);
                 }
-            }            
+            }
+
+            return 0;
         }
     }
 }

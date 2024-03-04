@@ -29,6 +29,8 @@ namespace TodoListMTP
                 app.UseSwaggerUI();
             }
 
+            app.UseCors(option => option.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
